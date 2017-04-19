@@ -1,7 +1,9 @@
-library(shiny)
+list.of.packages <- c("ggvis", "shiny", "reshape2", "dplyr")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
 library(ggvis)
-library(reshape)
-library(ggplot2)
+library(shiny)
+library(reshape2)
 library(dplyr)
 
 
